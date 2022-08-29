@@ -7,7 +7,7 @@ function App() {
         <button>Hello</button>
         <button>These</button>
         <button>Are</button>
-        <button>Vinni</button>
+        <button>Sionepeni</button>
       </div>
     </>
   )
