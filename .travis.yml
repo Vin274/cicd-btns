@@ -9,7 +9,6 @@ install:
 
 script:
   - echo 'Running Tests'
-  - npm test
 before_deploy:
   - echo 'Ready for deployment?'
   - firebase deploy --token "$FIREBASE_TOKEN"
@@ -20,4 +19,5 @@ deploy:
   skip_cleanup: true
   on:
     all_branches: true
-after_deploy: echo 'Deploy Success'
+after_deploy:
+  - echo 'Deploy Success'
