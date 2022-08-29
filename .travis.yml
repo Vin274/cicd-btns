@@ -1,0 +1,23 @@
+language: node_js
+node_js:
+  - "lts/*"
+cache: npm
+
+install:
+  - npm ci
+  - npm install firebase-tools -g
+
+script:
+  - echo 'Running Tests'
+  - npm test
+before_deploy:
+  - echo 'Ready for deployment?'
+  - firebase deploy --token "$FIREBASE_TOKEN"
+deploy:
+  provider: firebase
+  token:
+    secure: "$FIREBASE_TOKEN"
+  skip_cleanup: true
+  on:
+    all_branches: true
+after_deploy: echo 'Deploy Success'
