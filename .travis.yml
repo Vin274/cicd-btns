@@ -7,5 +7,14 @@ install:
   - npm ci
   - npm install firebase-tools -g
 
-after_success:
+script:
+  - echo 'Running Tests'
+before_deploy:
+  - echo 'Ready for deployment?'
+deploy:
   - firebase deploy --token "$FIREBASE_TOKEN"
+  skip_cleanup: true
+  on:
+    all_branches: true
+after_deploy:
+  - echo 'Deploy Success'
