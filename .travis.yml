@@ -20,3 +20,9 @@ jobs:
             - firebase deploy
     after_success:
         - firebase deploy --token "$FIREBASE_TOKEN"
+    notifications:
+    email:
+    recipients:
+        - vfdsione@gmail.com.com
+    on_success: never
+    on_failure: always
