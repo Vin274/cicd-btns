@@ -6,13 +6,17 @@ cache: npm
 jobs:
   include:
     script:
-      - echo 'Deploy!!'
       - echo 'Installing Deps!'
       - npm ci
       - npm run build
+      - npm install firebase-tools -g
+      - echo 'Deploy!!'
   deploy:
     provider: firebase
     token:
       secure: "$FIREBASE_TOKEN"
     project: "react-btns"
     skip_cleanup: true
+    after_deploy:
+      - echo 'Deploy Success'
+      - firebase deploy
