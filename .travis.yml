@@ -15,6 +15,7 @@ jobs:
             - echo 'Deploy!!'
             - echo 'Deploy Success'
             - firebase deploy
+        after_script:
+            if: type = pull_request
     after_success:
-    if: type = pull_request
         - firebase deploy --token "$FIREBASE_TOKEN"
