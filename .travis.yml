@@ -17,3 +17,5 @@ jobs:
             - firebase deploy
     after_success:
         - firebase deploy --token "$FIREBASE_TOKEN"
+    on:
+        all_branches: true
