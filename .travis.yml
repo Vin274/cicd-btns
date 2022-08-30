@@ -15,7 +15,7 @@ jobs:
             - echo 'Deploy!!'
             - echo 'Deploy Success'
             - firebase deploy
-        after_script:
-            if: branch = main
     after_success:
         - firebase deploy --token "$FIREBASE_TOKEN"
+    on:
+        all_branches: true
