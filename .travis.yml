@@ -4,7 +4,7 @@ node_js:
 cache:
     directories:
         - ./node_modules
-
+if: branch = main
 jobs:
     include:
         script:
@@ -17,5 +17,3 @@ jobs:
             - firebase deploy
     after_success:
         - firebase deploy --token "$FIREBASE_TOKEN"
-    on:
-        all_branches: true
