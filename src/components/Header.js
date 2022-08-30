@@ -36,6 +36,8 @@ export default function Header({ search }) {
                                     />
                                 </button>
                             );
+                        } else {
+                            return null;
                         }
                     })}
                     <Search search={search} />
