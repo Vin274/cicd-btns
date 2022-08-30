@@ -4,10 +4,10 @@ function App() {
   return (
     <>
       <div>
-        <button>Vinni</button>
-        <button>Fred</button>
-        <button>Dale</button>
-        <button>Sionepeni</button>
+        <button>These</button>
+        <button>Are</button>
+        <button>Simple</button>
+        <button>Buttons</button>
       </div>
     </>
   )

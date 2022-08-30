@@ -16,5 +16,4 @@ jobs:
       - echo 'Deploy Success'
       - firebase deploy
   after_success:
-    - yarn build
     - firebase deploy --token "$FIREBASE_TOKEN"
