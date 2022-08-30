@@ -5,18 +5,14 @@ cache: npm
 
 jobs:
   include:
-    - stage: test
-      script:
-        - echo 'Deploy!!'
-        - echo 'Installing Deps!'
-        - npm ci
-    - stage: build
-      script:
-        - npm run build
-    - stage: deploy
-    deploy:
+    script:
+      - echo 'Deploy!!'
+      - echo 'Installing Deps!'
+      - npm ci
+      - npm run build
+  deploy:
     provider: firebase
     token:
-        secure: "$FIREBASE_TOKEN"
+      secure: "$FIREBASE_TOKEN"
     project: "react-btns"
     skip_cleanup: true
