@@ -14,7 +14,9 @@ jobs:
       script:
         - npm run build
     - stage: deploy
-      script:
-        - npm install -g firebase-tools
-        - firebase deploy --token "$FIREBASE_TOKEN" --only hosting
-      skip_cleanup: true
+    deploy:
+    provider: firebase
+    token:
+        secure: "$FIREBASE_TOKEN"
+    project: "react-btns"
+    skip_cleanup: true
