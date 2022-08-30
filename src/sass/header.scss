@@ -1,0 +1,50 @@
+@import'theme';
+
+.header{
+    min-height: 15.6vh;
+    display: flex;
+    flex-direction: column;
+    &-top{
+        margin: auto;
+        .h-b-t{
+            border-style: none;
+            background-color: white;
+            color: $primary-color;
+        }
+    }
+    &-mid{
+        margin: auto;
+        height: 60%
+    }
+    &-bottom{
+        display: flex;
+        justify-content: center;
+        height: 25%;
+        background-color: $primary-color;
+        width: 100%;
+        .h-b-l{
+            &:hover{
+                background-color: $secondary-color;
+            }
+            .front-icon {
+                padding-right: 8px;
+                margin-left: 8px;
+            }
+            .back-icon {
+                margin-right: 8px;
+                padding-left: 8px;
+            }
+
+        }
+        .h-b-r{
+            &:hover{
+                background-color: $secondary-color;
+            }
+            .back-icon {
+                margin-right: 8px;
+                padding-left: 8px;
+            }
+        }
+    }
+}
+

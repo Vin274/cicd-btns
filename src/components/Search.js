@@ -34,9 +34,9 @@ export default function Search({ search }) {
                     value={searchText}
                     placeholder="Search..."
                 ></input>
-                <i>
+                <div className="search-icon">
                     <FontAwesomeIcon icon={faMagnifyingGlass} color="grey" />
-                </i>
+                </div>
             </div>
         </div>
     );

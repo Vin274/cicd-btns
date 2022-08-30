@@ -1,0 +1,31 @@
+.cardholder{
+    padding-top: 1%;
+    width: 55%;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    img{
+        border: 1px solid rgba(0, 0, 0, 0.406);
+    }
+    li{
+        list-style-type: none;
+        border-bottom: 2.5px solid rgba(0, 0, 0, 0.406);
+    }
+    p{
+        width: 90%;
+        margin: auto;
+        padding-bottom: 15px;
+    }
+    a{
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+    }
+    &-urls{
+        padding: 15px;
+        color: rgba(0, 0, 0, 0.406);
+        cursor: pointer;
+        &:hover{
+            color: rgb(0, 118, 190);
+        }
+    }
+}

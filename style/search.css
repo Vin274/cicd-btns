@@ -1,10 +1,6 @@
 .h-b-l, .h-b-r {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   border-style: none;
   background-color: rgb(0, 118, 190);
   color: white;
@@ -14,22 +10,15 @@
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-transition: 0.5s;
+  justify-content: center;
   transition: 0.5s;
 }
 
 .searchbox {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 300PX;
   height: 48px;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
-  position: relative;
 }
 .searchbox:hover {
   background-color: rgb(0, 74, 134);
@@ -47,9 +36,4 @@
 }
 .searchbox input:focus {
   outline: none;
-}
-.searchbox .search-icon {
-  position: absolute;
-  left: 85%;
-  top: 25%;
 }/*# sourceMappingURL=search.css.map */

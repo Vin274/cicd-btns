@@ -1,0 +1,20 @@
+$primary-color: rgb(0, 118, 190);
+$secondary-color: rgb(0, 74, 134);
+
+%nav-btn{
+    display: flex;
+    align-items: center;
+    border-style: none;
+    background-color: $primary-color;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    width: fit-content;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+.h-b-l, .h-b-r{
+    @extend %nav-btn
+}
