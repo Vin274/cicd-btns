@@ -20,7 +20,7 @@ describe("Replacing special character strings", () => {
             const removingChars = newInput.replace(specialChars, " ");
             const expected = removingChars.replace(whiteSpaces, " ").trim();
 
-            return expect(expected).toBe(item.expect);
+            return expect(expected).toBe(item.expected);
         });
     });
 });
