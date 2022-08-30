@@ -8,16 +8,18 @@ if: branch = main
 jobs:
     include:
         - stage: install & build
-            script:
-                - echo 'Installing Deps!'
-                - npm ci
-                - echo 'Running Build'
-                - npm run build
-                - echo 'Installing firebase tools'
-                - npm install firebase-tools -g
+        script:
+            - echo 'Installing Deps!'
+            - npm ci
+            - echo 'Running Build'
+            - npm run build
+            - echo 'Installing firebase tools'
+            - npm install firebase-tools -g
         - stage: test
-                - echo 'Running Tests'
-                - npm test
+        script:
+            - echo 'Running Tests'
+            - npm test
         - stage:
-                - echo 'Deploying!'
-                - firebase deploy --token "$FIREBASE_TOKEN"
+        script:
+            - echo 'Deploying!'
+            - firebase deploy --token "$FIREBASE_TOKEN"
