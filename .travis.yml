@@ -17,3 +17,4 @@ jobs:
       script:
         - npm install -g firebase-tools
         - firebase deploy --token "$FIREBASE_TOKEN" --only hosting
+      skip_cleanup: true
