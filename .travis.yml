@@ -15,6 +15,5 @@ jobs:
         - npm run build
     - stage: deploy
       script:
-        skip_cleanup: true
         - npm install -g firebase-tools
         - firebase deploy --token "$FIREBASE_TOKEN"
