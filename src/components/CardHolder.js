@@ -6,7 +6,7 @@ export default function CardHolder({ results }) {
             <div className="cardholder">
                 <li className="cardholder-li">
                     <h2>
-                        <a target="_blank" href={results.url}>
+                        <a target="_blank" rel="noreferrer" href={results.url}>
                             {" "}
                             {results.name}{" "}
                         </a>
