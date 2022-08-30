@@ -31,7 +31,7 @@ function App() {
     return (
         <>
             <div className="container-top">
-                <button>VIN</button>
+                <button>SIONEPENI</button>
                 <Header search={search} />
                 {background === false ? (
                     <img
