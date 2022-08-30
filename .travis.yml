@@ -7,6 +7,7 @@ cache:
 
 jobs:
   include:
+    - stage: test
     script:
       - echo 'Installing Deps!'
       - npm ci
@@ -15,5 +16,11 @@ jobs:
       - echo 'Deploy!!'
       - echo 'Deploy Success'
       - firebase deploy
+    - stage: deploy
   after_success:
     - firebase deploy --token "$FIREBASE_TOKEN"
+stages:
+  - name: test
+    if: type = pull_request
+  - name: deploy
+    if: type = push AND branch = master
