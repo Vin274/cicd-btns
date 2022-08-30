@@ -19,6 +19,12 @@
           justify-content: center;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+}
+.h-b-l img, .h-b-r img {
+  width: 10px;
 }
 
 .searchbox {

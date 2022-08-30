@@ -10,10 +10,13 @@ jobs:
         script:
             - echo 'Installing Deps!'
             - npm ci
+            - echo 'Running Build'
             - npm run build
+            - echo 'Running Tests'
+            - npm test
+            - echo 'Installing firebase tools'
             - npm install firebase-tools -g
-            - echo 'Deploy!!'
-            - echo 'Deploy Success'
+            - echo 'Deploying!'
             - firebase deploy
     after_success:
         - firebase deploy --token "$FIREBASE_TOKEN"

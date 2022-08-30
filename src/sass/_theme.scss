@@ -13,6 +13,12 @@ $secondary-color: rgb(0, 74, 134);
     width: fit-content;
     justify-content: center;
     transition: 0.5s;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    img{
+        width: 10px;
+    }
 }
 
 .h-b-l, .h-b-r{
