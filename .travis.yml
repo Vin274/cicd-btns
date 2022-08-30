@@ -7,19 +7,16 @@ cache:
 if: branch = main
 jobs:
     include:
-        - stage: install & build
         script:
             - echo 'Installing Deps!'
             - npm ci
             - echo 'Running Build'
             - npm run build
-            - echo 'Installing firebase tools'
-            - npm install firebase-tools -g
-        - stage: test
-        script:
             - echo 'Running Tests'
             - npm test
-        - stage:
-        script:
+            - echo 'Installing firebase tools'
+            - npm install firebase-tools -g
             - echo 'Deploying!'
-            - firebase deploy --token "$FIREBASE_TOKEN"
+            - firebase deploy
+    after_success:
+        - firebase deploy --token "$FIREBASE_TOKEN"
