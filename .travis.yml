@@ -18,5 +18,4 @@ jobs:
     provider: firebase
     token:
       secure: "$FIREBASE_TOKEN"
-    project: "react-btns"
     skip_cleanup: true
