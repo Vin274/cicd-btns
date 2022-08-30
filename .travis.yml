@@ -11,12 +11,12 @@ jobs:
       - npm run build
       - npm install firebase-tools -g
       - echo 'Deploy!!'
+    before_deploy:
+      - echo 'Deploy Success'
+      - firebase deploy
   deploy:
     provider: firebase
     token:
       secure: "$FIREBASE_TOKEN"
     project: "react-btns"
     skip_cleanup: true
-    after_deploy:
-      - echo 'Deploy Success'
-      - firebase deploy
