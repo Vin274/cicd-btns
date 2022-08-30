@@ -3,13 +3,14 @@ import { headerBtns, headerBannerA, headerBannerB } from "../data/headerBtns";
 import Search from "./Search";
 
 export default function Header({ search }) {
+    const altIcon = null;
     return (
         <>
             <div className="header">
                 <div className="header-top">
                     {headerBtns.map((item, index) => {
                         return (
-                            <button className="h-b-t" index={index}>
+                            <button className="h-b-t" key={index}>
                                 {item.name}
                             </button>
                         );
@@ -22,17 +23,19 @@ export default function Header({ search }) {
                     {headerBannerA.map((item, index) => {
                         if (item.icon || item.icons) {
                             return (
-                                <button className="h-b-l" index={index}>
+                                <button className="h-b-l" key={index}>
                                     <img
                                         className="front-icon"
                                         src={item.icon}
                                         width={10}
+                                        alt={altIcon}
                                     />
                                     {item.name}
                                     <img
                                         className="back-icon"
                                         src={item.icons}
                                         width={10}
+                                        alt={altIcon}
                                     />
                                 </button>
                             );
@@ -43,12 +46,13 @@ export default function Header({ search }) {
                     <Search search={search} />
                     {headerBannerB.map((item, index) => {
                         return (
-                            <button className="h-b-r" index={index}>
+                            <button className="h-b-r" key={index}>
                                 {item.name}
                                 <img
                                     className="back-icon"
                                     src={item.icons}
                                     width={10}
+                                    alt={altIcon}
                                 />
                             </button>
                         );
